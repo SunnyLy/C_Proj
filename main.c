@@ -8,7 +8,7 @@
 #define STR_CONST "Good Night!"
 
 /**
- * Èë¿Ú£¬»¹ÊÇÂÒÂëÂğ£¿
+ * å…¥å£ï¼Œè¿˜æ˜¯ä¹±ç å—ï¼Ÿ
  */
 int main() {
     printf("Hello World\r\n");
