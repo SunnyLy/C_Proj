@@ -14,8 +14,8 @@ int main() {
     //formatPrint(STR_CONST);
     //testSizeof();
     //test3();
-
-    testArray();
+    //testArray();
+    testScanfMethod();
 
     return 0;
 }

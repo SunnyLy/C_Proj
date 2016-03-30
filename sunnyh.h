@@ -9,9 +9,9 @@
 #include <stdio.h>
 #include <mem.h>
 /**
- * å­—ç¬¦ä¸Žæ•´åž‹ï¼š
- * æ³¨ï¼šå¤§å°å†™å­—æ¯åœ¨ASCIIä¸­ç›¸å·®32
- * å°å†™å­—æ¯ - 32 = å¤§å†™å­—æ¯
+ * ×Ö·ûÓëÕûÐÍ£º
+ * ×¢£º´óÐ¡Ð´×ÖÄ¸ÔÚASCIIÖÐÏà²î32
+ * Ð¡Ð´×ÖÄ¸ - 32 = ´óÐ´×ÖÄ¸
  */
 void testChar1() {
     char a, b;
@@ -24,7 +24,7 @@ void testChar1() {
 }
 
 /**
- * 2.constå…³é”®å­—ï¼ŒæŠŠä¸€ä¸ªå˜é‡è½¬æ¢æˆå¸¸é‡
+ * 2.const¹Ø¼ü×Ö£¬°ÑÒ»¸ö±äÁ¿×ª»»³É³£Á¿
  */
 void testConst() {
 
@@ -35,18 +35,18 @@ void testConst() {
 }
 
 /**
- * æ ¼å¼åŒ–è¾“å‡º
- * ä»¥%-20.3sä¸ºä¾‹
- * -:è¡¨ç¤ºå·¦å¯¹é½
- * +:è¡¨ç¤ºå³å¯¹é½
- * æ•´æ•°éƒ¨åˆ†20:è¡¨ç¤ºåˆ†é…ç»™å­—ç¬¦ä¸²çš„ç©ºé—´å¤§å°ï¼Œåœ¨å‰é¢è¡¥ä¸Šç©ºæ ¼
- * å°æ•°éƒ¨åˆ†3:è¡¨ç¤ºåªæ‰“å°3ä¸ªå­—ç¬¦ï¼Œå¦‚æžœå¤§äºŽå­—ç¬¦ä¸²å­—ç¬¦çš„ä¸ªæ•°ï¼Œåˆ™å…¨éƒ¨æ‰“å°å‡ºæ¥
- * å¦‚æžœæ²¡æœ‰å°æ•°ï¼Œæ¯”å¦‚ï¼š%2s
- * å¦‚æžœ2å°äºŽå­—ç¬¦ä¸ªæ•°æ—¶ï¼Œå­—ç¬¦ä¸²å…¨éƒ¨æ‰“å°ï¼Œ
- * å¦‚æžœå¤§äºŽå­—ç¬¦ä¸ªæ•°ï¼Œåˆ™åœ¨å‰é¢è¡¥ä¸Šå¤šå‡ºçš„ç©ºæ ¼æ•°
+ * ¸ñÊ½»¯Êä³ö
+ * ÒÔ%-20.3sÎªÀý
+ * -:±íÊ¾×ó¶ÔÆë
+ * +:±íÊ¾ÓÒ¶ÔÆë
+ * ÕûÊý²¿·Ö20:±íÊ¾·ÖÅä¸ø×Ö·û´®µÄ¿Õ¼ä´óÐ¡£¬ÔÚÇ°Ãæ²¹ÉÏ¿Õ¸ñ
+ * Ð¡Êý²¿·Ö3:±íÊ¾Ö»´òÓ¡3¸ö×Ö·û£¬Èç¹û´óÓÚ×Ö·û´®×Ö·ûµÄ¸öÊý£¬ÔòÈ«²¿´òÓ¡³öÀ´
+ * Èç¹ûÃ»ÓÐÐ¡Êý£¬±ÈÈç£º%2s
+ * Èç¹û2Ð¡ÓÚ×Ö·û¸öÊýÊ±£¬×Ö·û´®È«²¿´òÓ¡£¬
+ * Èç¹û´óÓÚ×Ö·û¸öÊý£¬ÔòÔÚÇ°Ãæ²¹ÉÏ¶à³öµÄ¿Õ¸ñÊý
  */
 void formatPrint(const char *str) {
-    printf("ä¼ å…¥çš„å­—ç¬¦ä¸²é•¿åº¦ï¼š%d\n",strlen(str));
+    printf("´«ÈëµÄ×Ö·û´®³¤¶È£º%d\n",strlen(str));
     printf("/%2s/\n", str);
     printf("/%20s/\n", str);
     printf("/%20.5s/\n", str);
@@ -63,12 +63,12 @@ void formatPrint(const char *str) {
 }
 
 /**
- * æµ‹è¯•sizeof è¿ç®—ç¬¦ ä¸Žsize_tç±»åž‹
- * sizeof è¿”å›ž size_tç±»åž‹çš„å€¼ ï¼Œå®ƒä¸æ˜¯ä¸€ä¸ªæ–°ç±»åž‹ã€‚è€Œæ˜¯ä¸€ä¸ªè‡ªå®šä¹‰çš„æ— ç¬¦å·æ•´åž‹çš„åˆ«åã€‚
- * è¿™ç§åˆ«åæ˜¯ç”±typedefæœºåˆ¶æ¥åˆ›å»ºçš„ã€‚
+ * ²âÊÔsizeof ÔËËã·û Óësize_tÀàÐÍ
+ * sizeof ·µ»Ø size_tÀàÐÍµÄÖµ £¬Ëü²»ÊÇÒ»¸öÐÂÀàÐÍ¡£¶øÊÇÒ»¸ö×Ô¶¨ÒåµÄÎÞ·ûºÅÕûÐÍµÄ±ðÃû¡£
+ * ÕâÖÖ±ðÃûÊÇÓÉtypedef»úÖÆÀ´´´½¨µÄ¡£
  * eg:
  * typedef double sunnyDouble;
- * è¿™æ ·ä¸€æ¥ï¼ŒsunnyDoubleå°±å¯ä»¥ä»£è¡¨doubleç±»åž‹äº†ã€‚
+ * ÕâÑùÒ»À´£¬sunnyDouble¾Í¿ÉÒÔ´ú±ídoubleÀàÐÍÁË¡£
  * sunnyDouble d = 1.3;
  * double d1 = 1.3
  *
@@ -84,15 +84,15 @@ void testSizeof() {
     double d1 = 1.3;
     sunnyDouble d2 = 1.3;
     if (d1 == d2) {
-        printf("d1 ä¸Ž d2æ˜¯åŒä¸€ä¸ªç±»åž‹");
+        printf("d1 Óë d2ÊÇÍ¬Ò»¸öÀàÐÍ");
     }
 }
 
 /**
- * æ‰“å°é‡‘å­—å¡”
+ * ´òÓ¡½ð×ÖËþ
  */
 void test3() {
-    printf("Hi Sunny,è¯·éšä¾¿è¾“å…¥ä¸€ä¸ªå¤§å†™å­—æ¯,è®©æˆ‘æ¥ä¸ºä½ ç”Ÿæˆä¸€ä¸ªé‡‘å­—å¡”å›¾æ¡ˆ:\n");
+    printf("Hi Sunny,ÇëËæ±ãÊäÈëÒ»¸ö´óÐ´×ÖÄ¸,ÈÃÎÒÀ´ÎªÄãÉú³ÉÒ»¸ö½ð×ÖËþÍ¼°¸:\n");
     char input;
     scanf("%c", &input);
     const int ROWS = 5;
@@ -102,15 +102,15 @@ void test3() {
     for (row = 0; row < ROWS; row++) {
         char temp = input;
         for (blank = 0; blank < (ROWS - row); blank++) {
-            //æ‰“å°ç©ºæ ¼
+            //´òÓ¡¿Õ¸ñ
             printf(" ");
         }
-        //æ‰“å°å‡åº
+        //´òÓ¡ÉýÐò
         int up, down;
         for (up = 0; up <= row; up++) {
             printf("%c", temp + up);
         }
-        //é™åº
+        //½µÐò
         for (down = temp + row; down > temp; down--) {
             printf("%c", down - 1);
         }
@@ -121,20 +121,40 @@ void test3() {
 }
 
 /**
- * æµ‹è¯•æ•°ç»„
- * è®°ä½ï¼šå­—ç¬¦ä¸²æ˜¯å­˜å‚¨åœ¨å­—ç¬¦æ•°ç»„é‡Œé¢ï¼Œæ˜¯ä¸€ä¸²è¿žç»­çš„å­—ç¬¦ã€‚
+ * ²âÊÔÊý×é
+ * ¼Ç×¡£º×Ö·û´®ÊÇ´æ´¢ÔÚ×Ö·ûÊý×éÀïÃæ£¬ÊÇÒ»´®Á¬ÐøµÄ×Ö·û¡£
  */
 void testArray() {
 
-    printf("è¯·éšä¾¿é”®å…¥ä¸€ä¸ªå•è¯:\n");
+    printf("ÇëËæ±ã¼üÈëÒ»¸öµ¥´Ê:\n");
     char word[100];
     int end;
     scanf("%s", &word);
-    printf("################ä¸‹é¢å¼€å§‹æ‰“å°,æ•°ç»„é•¿åº¦:%d##############\n", strlen(word));
+    printf("################ÏÂÃæ¿ªÊ¼´òÓ¡,Êý×é³¤¶È:%d##############\n", strlen(word));
     for (end = strlen(word) - 1; end >= 0; end--) {
         printf("%c", word[end]);
     }
     printf("\n");
+}
+
+/**
+ * ²âÊÔÊäÈëº¯Êý£º
+ * Ñ­»·¶ÁÈ¡ÓÃ»§ÊäÈëµÄ2¸ö¸¡µãÊý£¬µ±ÊäÈë²»ÕýÈ·Ê±£¬ÖÕÖ¹
+ *
+ * ±¸×¢£ºµ±ÊäÈëµÄ¶«Î÷ÎÇºÏÒªÇóµÄ¸ñÊ½Ê±£¬Ôò·µ»Ø>0µÄÕýÕûÊý
+ * eg:scanf("%f",&a)Èç¹ûÊäÈëµÄÊýÎª¸¡µãÊý£¬Ôò·µ»Ø1
+ * µ±ÒªÇóÊäÈë2¸öÊý£¬ÇÒ·Ö±ðÎÇºÏÊ±£¬Ôò·µ»Ø2£¬
+ * ÒÔ´ËÀàÍÆ¡£
+ * Ïà·´£¬Èç¹ûÓÃ»§ÊäÈëµÄ¶«Î÷ÓëÒªÇó²»Æ¥Åä£¬Ôò·µ»Ø0
+ */
+void testScanfMethod(){
+    float a,b;
+    printf("ÇëÊäÈëÈÎÒâÁ½¸ö¸¡µãÊý:\n");
+    while (scanf("%f%f",&a,&b) == 2){
+        printf("(%.2f-%.2f)/(%.2f*%.2f) = %.2f\n",a,b,a,b,(a-b)/(a*b));
+        printf("ÇëÊäÈëÈÎÒâÁ½¸ö¸¡µãÊý:\n");
+    }
+    printf("end\n");
 }
 
 #endif //C_PROJ_SUNNYH_H
