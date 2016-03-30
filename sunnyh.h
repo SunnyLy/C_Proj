@@ -8,6 +8,20 @@
 
 #include <stdio.h>
 #include <mem.h>
+
+/**
+ * 枚举类型的用法
+ */
+typedef enum DepositType{
+    CURRENT, //活期
+    TRIMESTER, //三个月定期
+    HALF_YEAR, //半年
+    ONE_YEAR,
+    TWO_YEAR,
+    THREE_YEAR,
+    FIVE_YEAR
+}DepositType;
+
 /**
  * 字符与整型：
  * 注：大小写字母在ASCII中相差32
@@ -46,7 +60,7 @@ void testConst() {
  * 如果大于字符个数，则在前面补上多出的空格数
  */
 void formatPrint(const char *str) {
-    printf("传入的字符串长度：%d\n",strlen(str));
+    printf("传入的字符串长度：%d\n", strlen(str));
     printf("/%2s/\n", str);
     printf("/%20s/\n", str);
     printf("/%20.5s/\n", str);
@@ -147,14 +161,52 @@ void testArray() {
  * 以此类推。
  * 相反，如果用户输入的东西与要求不匹配，则返回0
  */
-void testScanfMethod(){
-    float a,b;
+void testScanfMethod() {
+    float a, b;
     printf("请输入任意两个浮点数:\n");
-    while (scanf("%f%f",&a,&b) == 2){
-        printf("(%.2f-%.2f)/(%.2f*%.2f) = %.2f\n",a,b,a,b,(a-b)/(a*b));
+    while (scanf("%f%f", &a, &b) == 2) {
+        printf("(%.2f-%.2f)/(%.2f*%.2f) = %.2f\n", a, b, a, b, (a - b) / (a * b));
         printf("请输入任意两个浮点数:\n");
     }
     printf("end\n");
+}
+
+/**
+ * 以兴业银行为例计算存款
+ */
+void test4(int year, DepositType type) {
+    int base = 10000;
+    //活期存款利息
+    float rateUp;
+    switch (type) {
+        case CURRENT:
+            rateUp = (1 + 0.0030);
+            break;
+        case TRIMESTER:
+            rateUp = (1 + 0.0150);
+            break;
+        case HALF_YEAR:
+            rateUp = (1 + 0.0175);
+            break;
+        case ONE_YEAR:
+            rateUp = (1 + 0.0200);
+            break;
+        case TWO_YEAR:
+            rateUp = (1 + 0.0275);
+            break;
+        case THREE_YEAR:
+        case FIVE_YEAR:
+            rateUp = (1 + 0.0320);
+            break;
+    }
+
+    while (year > 0) {
+        rateUp *= rateUp;
+        year--;
+    }
+    float result = base * rateUp;
+
+    printf("最后可得本金利息共result=%f\n", result);
 }
 
 #endif //C_PROJ_SUNNYH_H
