@@ -7,9 +7,6 @@
 
 #define STR_CONST "Good Night!"
 
-/**
- * 入口，还是乱码吗？
- */
 int main() {
     printf("Hello World\r\n");
     // testChar1();

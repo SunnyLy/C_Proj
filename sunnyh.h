@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include <mem.h>
-
 /**
  * 字符与整型：
  * 注：大小写字母在ASCII中相差32
@@ -47,7 +46,7 @@ void testConst() {
  * 如果大于字符个数，则在前面补上多出的空格数
  */
 void formatPrint(const char *str) {
-    printf("传入的字符串长度：%d\n", strlen(str));
+    printf("传入的字符串长度：%d\n",strlen(str));
     printf("/%2s/\n", str);
     printf("/%20s/\n", str);
     printf("/%20.5s/\n", str);
@@ -90,8 +89,8 @@ void testSizeof() {
 }
 
 /**
-* 打印金字塔
-*/
+ * 打印金字塔
+ */
 void test3() {
     printf("Hi Sunny,请随便输入一个大写字母,让我来为你生成一个金字塔图案:\n");
     char input;
@@ -103,15 +102,15 @@ void test3() {
     for (row = 0; row < ROWS; row++) {
         char temp = input;
         for (blank = 0; blank < (ROWS - row); blank++) {
-            //??????
+            //打印空格
             printf(" ");
         }
-        //???????
+        //打印升序
         int up, down;
         for (up = 0; up <= row; up++) {
             printf("%c", temp + up);
         }
-        //????
+        //降序
         for (down = temp + row; down > temp; down--) {
             printf("%c", down - 1);
         }
@@ -122,9 +121,9 @@ void test3() {
 }
 
 /**
-* 测试数组
-* 记住：字符串是存储在字符数组里面，是一串连续的字符。
-*/
+ * 测试数组
+ * 记住：字符串是存储在字符数组里面，是一串连续的字符。
+ */
 void testArray() {
 
     printf("请随便键入一个单词:\n");
