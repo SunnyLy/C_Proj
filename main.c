@@ -17,9 +17,12 @@ int main() {
     //test3();
     //testArray();
     //testScanfMethod();
-    DepositType depositType;
+
+    /*DepositType depositType;
     depositType = HALF_YEAR;
-    test4(1,depositType);
+    test4(1,depositType);*/
+    //test5();
+    testPoint();
 
     return 0;
 }

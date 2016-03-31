@@ -5,9 +5,11 @@
 #ifndef C_PROJ_SUNNYH_H
 #define C_PROJ_SUNNYH_H
 #define FORMAT "%s!C is cool !\n"
+#define SPACE ' '
 
 #include <stdio.h>
 #include <mem.h>
+#include <ctype.h>
 
 /**
  * 枚举类型的用法
@@ -207,6 +209,43 @@ void test4(int year, DepositType type) {
     float result = base * rateUp;
 
     printf("最后可得本金利息共result=%f\n", result);
+}
+
+void test5(){
+    printf("请随意输入::\n");
+    char test;
+    while ((test = getchar()) != '\n'){
+        if(isalpha(test)){//如果输入的是一个字母
+
+            putchar(test + 1);//改变后打印
+        } else
+            putchar(test);//原样打印
+    }
+    putchar(test);
+}
+
+/**
+ * 指针
+ * 知识：
+ * 1，数组名同时也是数组元素的首地址，
+ * 2，指针加1时，指针所指的地址向后移8位
+ * 3，说明符%p代表指针所指向单元的值
+ * 4，在多维数组中以二维数组zippo[4][2]为例：
+ *    由于zippo数组名代表数组首元素(zippo[0][0])的地址
+ *    而zippo[0]代表第1列（每列中又有2个元素），所以zippo[0]是一个有2个值的数组，
+ *    这样，zippo[0]又代表首元素地址，即也与(zippo[0][0])相同，
+ *    最终：zippo == &zippo[0] == &zippo[0][0]
+ */
+void testPoint(){
+    int zippo[4][2] = {{2,4},{6,8},{1,3},{2,5}};
+    printf("zippo = %p,zippo + 1 = %p\n",zippo,zippo + 1);
+    printf("*zippo = %p,*zippo + 1 = %p\n",*zippo,*zippo + 1);
+    printf("zippo[0][0] = %p,zippo[0][0] + 1 = %p\n",zippo[0][0],zippo[0][0] + 1);
+    printf("zippo[0] = %p,zippo[0] + 1 = %p\n",zippo[0],zippo[0] + 1);
+    printf("zippo = %p,&zippo[0][0]= %p\n",zippo,&zippo[0][0]);
+    printf("zippo = %p,&zippo[0] = %p\n",zippo,&zippo[0]);
+    printf("&zippo[0][0] = %p,&zippo[0] = %p\n",&zippo[0][0],&zippo[0]);
+    printf("&zippo[0][0] = %p,&zippo[0] = %p\n",&zippo[0][0],&zippo[0]);
 }
 
 #endif //C_PROJ_SUNNYH_H
