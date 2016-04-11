@@ -2,6 +2,7 @@
 // Created by sunny on 2016/3/28.
 //
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "sunnyh.h"
 
@@ -22,8 +23,10 @@ int main() {
     depositType = HALF_YEAR;
     test4(1,depositType);*/
     //test5();
-    testPoint();
+    //testPoint();
+    testStr();
 
-    return 0;
+    //return 0;//这个return 0;其实就是退出程序，与exit(0)是一样的。
+    exit(0);
 }
 

@@ -248,4 +248,16 @@ void testPoint(){
     printf("&zippo[0][0] = %p,&zippo[0] = %p\n",&zippo[0][0],&zippo[0]);
 }
 
+/**
+ * 测试字符串
+ */
+void testStr(){
+    const int nameLen = 40;
+    char name[nameLen];
+    puts("Hi,Sunny,Welcome,What's your chinese name?");
+    gets(name);
+    printf("Hello,%s",name);
+    puts("\n好了，就这样");
+}
+
 #endif //C_PROJ_SUNNYH_H
