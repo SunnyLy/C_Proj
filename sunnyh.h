@@ -11,6 +11,19 @@
 #include <mem.h>
 #include <ctype.h>
 
+
+#define MAXTITLE 41/*书名的最大长度*/
+#define MAXAUTH 31/*作者名最大长度*/
+
+/*
+ * 结构模板
+ */
+struct book {
+    char title[MAXTITLE];
+    char author[MAXAUTH];
+    float value;
+}library;
+
 /**
  * 枚举类型的用法
  */
@@ -258,6 +271,22 @@ void testStr(){
     gets(name);
     printf("Hello,%s",name);
     puts("\n好了，就这样");
+}
+
+/**
+ * C语言结构和其他数据形式
+ */
+void testStruct(){
+
+   // struct book library;
+    printf("Please enter the book title.\n");
+    gets(library.title);
+    printf("Now enter the author.\n");
+    gets(library.author);
+    printf("Now enter the value.\n");
+    scanf("%f",&library.value);
+    printf("《%s》 by %s:$%.2f\n",library.title,library.author,library.value);
+    printf("Done.\n");
 }
 
 #endif //C_PROJ_SUNNYH_H
